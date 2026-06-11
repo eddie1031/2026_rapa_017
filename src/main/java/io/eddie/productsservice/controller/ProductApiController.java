@@ -26,6 +26,18 @@ public class ProductApiController {
         description = """
 게임 전반적으로 사용되는 아이템에 대한 내역을 추가하는 API입니다."""
     )
+    @ApiResponse(
+            responseCode = "201",
+            description = "저장된 상품에 대한 내역입니다.",
+            content = {
+                    @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(
+                                    implementation = Products.class
+                            )
+                    )
+            }
+    )
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Products> save(ProductRequest request) {
