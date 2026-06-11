@@ -19,7 +19,16 @@ spring:
       path: /h2-consoles
 
 springdoc:
+
   api-docs:
     enabled: true
+    path: /v3/api-docs
+
   swagger-ui:
     enabled: true
+    path: /v3/api-docs
+    operations-sorter: alpha # method # alpha # method
+    display-request-duration: true
+    doc-expansion: list
+    persist-authorization: true
+
