@@ -18,3 +18,8 @@ spring:
       enabled: true
       path: /h2-consoles
 
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
